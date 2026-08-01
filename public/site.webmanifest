@@ -1,0 +1,13 @@
+{
+  "name": "Kaka Ni Bhaji Pav",
+  "short_name": "Kaka Ni Bhaji Pav",
+  "description": "Vadodara's home for Ahmedabad's original bhaji pav. Pure vegetarian multi-cuisine dining.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F3EA",
+  "theme_color": "#17140F",
+  "icons": [
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
