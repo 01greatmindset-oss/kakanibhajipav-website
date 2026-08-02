@@ -442,3 +442,37 @@ function Home() {
     </>
   );
 }
+import React, { useState, useEffect } from 'react';
+
+export function ZomatoLiveBadge() {
+  // Initial 1.5 Lakh (150,000) count
+  const [orderCount, setOrderCount] = useState(150000);
+
+  // Real-time counter animation effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Simulate real-time new incoming orders (1-3 orders every 3.5 seconds)
+      setOrderCount((prevCount) => prevCount + Math.floor(Math.random() * 3) + 1);
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/10 via-red-500/10 to-orange-500/10 border border-orange-500/20 backdrop-blur-md shadow-sm transition-all duration-300 hover:scale-105">
+      {/* Live Motion Red Pulse Indicator */}
+      <span className="relative flex h-3 w-3">
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+        <span className="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span>
+      </span>
+
+      {/* Main Text & Real-time Counter */}
+      <p className="text-sm sm:text-base font-semibold text-gray-800 dark:text-gray-100 flex items-center gap-1.5">
+        <span className="text-orange-600 font-bold tracking-tight transition-all duration-500">
+          {orderCount.toLocaleString('en-IN')}+
+        </span>
+        <span>Orders Completed on <strong className="text-red-600 font-bold">Zomato</strong></span>
+      </p>
+    </div>
+  );
+}
