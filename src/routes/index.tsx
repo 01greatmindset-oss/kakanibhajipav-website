@@ -9,6 +9,7 @@ import {
   Clock,
   ArrowRight,
   Quote,
+  Award,
 } from "lucide-react";
 import { BRAND, BRANCHES, IMAGES, whatsappLink } from "@/data/brand";
 import { Reveal, SectionHeading } from "@/components/site/Reveal";
@@ -32,16 +33,16 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Ahmedabad's original bhaji pav, now in Vadodara. Pure veg multi-cuisine dining at Karelibaug, Diwalipura and Waghodia Road. Order on WhatsApp.",
+          "Ahmedabad's original bhaji pav, serving authentic taste since 1988 — now in Vadodara. Pure veg multi-cuisine dining at Karelibaug, Diwalipura and Waghodia Road. Order on WhatsApp.",
       },
       {
         property: "og:title",
-        content: "Kaka Ni Bhaji Pav | Best Pav Bhaji in Vadodara",
+        content: "Kaka Ni Bhaji Pav | Best Pav Bhaji in Vadodara, Since 1988",
       },
       {
         property: "og:description",
         content:
-          "Vadodara's home for Ahmedabad's original bhaji pav — pure vegetarian, three branches, loved by 2,700+ reviewers.",
+          "Vadodara's home for Ahmedabad's original bhaji pav — pure vegetarian since 1988, three Vadodara branches, loved by 2,700+ reviewers.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -111,7 +112,11 @@ function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/25" />
         <div className="relative mx-auto w-full max-w-7xl px-4 pt-28 pb-16 sm:px-6 sm:pb-20">
           <Reveal className="max-w-3xl">
-            <p className="eyebrow text-saffron">Ahmedabad Heritage · Vadodara Home</p>
+            <span className="heritage-badge">
+              <Award className="h-3.5 w-3.5" />
+              Serving Authentic Taste Since 1988
+            </span>
+            <p className="eyebrow mt-5 text-saffron">Ahmedabad Heritage · Vadodara Home</p>
             <h1 className="mt-5 font-display text-4xl leading-[1.05] font-semibold text-balance text-cream sm:text-6xl lg:text-7xl">
               Vadodara's Home for Ahmedabad's Original Bhaji Pav
             </h1>
@@ -155,15 +160,16 @@ function Home() {
       <section className="surface-grain bg-background py-20 sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-20">
           <Reveal>
-            <p className="eyebrow">Our Heritage</p>
+            <p className="eyebrow">Our Heritage · Since 1988</p>
             <h2 className="mt-4 font-display text-3xl leading-tight font-semibold text-balance sm:text-4xl md:text-5xl">
-              It started on the streets of Ahmedabad.
+              It started on the streets of Ahmedabad in 1988.
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
               <p>
                 Kaka Ni Bhaji Pav earned its name one plate at a time in Ahmedabad — a pan of bhaji
                 worked slowly until it turned glossy, pav split and pressed into butter, and a queue
-                that never seemed to shorten.
+                that never seemed to shorten. Nearly four decades on, the same recipe is still the
+                whole point.
               </p>
               <p>
                 Vadodara is a direct extension of that legacy. Same recipe, same proportions, same
@@ -318,9 +324,9 @@ function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
             <SectionHeading
-              eyebrow="Our 3 Locations"
-              title="Three outlets. One taste."
-              subtitle="Karelibaug, Diwalipura and Waghodia Road — each with its own dining room, and the same bhaji."
+              eyebrow="Our Vadodara Locations"
+              title="Three branches. One taste."
+              subtitle="Karelibaug, Diwalipura and Waghodia Road — each with its own dining room, and the same bhaji. The Kaka Ni Bhaji Pav name now serves 13 outlets across Gujarat."
             />
           </Reveal>
           <div className="mt-14 grid gap-8 lg:grid-cols-3">
@@ -388,19 +394,19 @@ function Home() {
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                stat: "3",
-                label: "Vadodara branches",
-                body: "Karelibaug flagship, Diwalipura and Waghodia Road — all company-run.",
+                stat: "1988",
+                label: "Serving since",
+                body: "Nearly four decades of the same recipe, starting on the streets of Ahmedabad.",
+              },
+              {
+                stat: "13",
+                label: "Outlets across Gujarat",
+                body: "3 in Vadodara, 8 in Ahmedabad and 2 in Surat — one consistent kitchen standard.",
               },
               {
                 stat: "2,700+",
                 label: "Public reviews",
-                body: "Across Justdial, Zomato and Google, averaging roughly 4.0 out of 5.",
-              },
-              {
-                stat: "Ahmedabad",
-                label: "Heritage lineage",
-                body: "A direct extension of the original Ahmedabad Kaka Ni Bhaji Pav name.",
+                body: "Across Justdial, Zomato and Google, averaging roughly 4.0 out of 5 in Vadodara.",
               },
               {
                 stat: "6+",

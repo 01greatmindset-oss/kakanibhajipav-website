@@ -1,4 +1,4 @@
-import { BRAND, BRANCHES, mapEmbedSrc } from "@/data/brand";
+import { BRAND, BRANCHES, OTHER_BRANCHES, mapEmbedSrc } from "@/data/brand";
 
 export function restaurantSchema(branch: (typeof BRANCHES)[number]) {
   return {
@@ -32,6 +32,31 @@ export function restaurantSchema(branch: (typeof BRANCHES)[number]) {
   };
 }
 
-export const allBranchSchemas = () => BRANCHES.map(restaurantSchema);
+// Outlets outside Vadodara only have a name, area and Google Maps link — no
+// verified phone, hours or rating data — so their schema stays minimal and
+// omits fields we can't source from the official directory.
+export function outletSchema(outlet: (typeof OTHER_BRANCHES)[number]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: outlet.name,
+    servesCuisine: ["Indian", "Gujarati Street Food"],
+    priceRange: "₹₹",
+    url: `/locations`,
+    hasMap: outlet.mapsUrl,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: `${outlet.area}, ${outlet.city}`,
+      addressRegion: "Gujarat",
+      addressCountry: "IN",
+    },
+    isAccessibleForFree: false,
+  };
+}
+
+export const allBranchSchemas = () => [
+  ...BRANCHES.map(restaurantSchema),
+  ...OTHER_BRANCHES.map(outletSchema),
+];
 
 export { mapEmbedSrc };

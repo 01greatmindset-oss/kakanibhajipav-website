@@ -1,6 +1,8 @@
 export const BRAND = {
   name: "Kaka Ni Bhaji Pav",
   promise: "Vadodara's Home for Ahmedabad's Original Bhaji Pav",
+  foundedYear: 1988,
+  heritageLine: "Serving Authentic Taste Since 1988",
   whatsappNumber: "+91 96240 03108",
   whatsappDigits: "919624003108",
   instagram: "https://www.instagram.com/kaka_ni_bhajipav_vadodara",
@@ -30,6 +32,7 @@ export function whatsappLink(message: string) {
 export type Branch = {
   slug: string;
   name: string;
+  city: "Vadodara";
   tag: string;
   address: string;
   addressParts: {
@@ -55,7 +58,8 @@ export const BRANCHES: Branch[] = [
   {
     slug: "karelibaug",
     name: "Karelibaug",
-    tag: "Flagship Branch",
+    city: "Vadodara",
+    tag: "Amit Nagar Circle, Sama Savli Road",
     address:
       "Shop 30-32/31, Krishna Valley Complex, Char Rasta, Amita Nagar, Opp. Ambe School, Near Amit Nagar Circle, Sama Savli Road, Karelibaug, Vadodara, Gujarat 390022",
     addressParts: {
@@ -85,6 +89,7 @@ export const BRANCHES: Branch[] = [
   {
     slug: "diwalipura",
     name: "Diwalipura",
+    city: "Vadodara",
     tag: "Malhar Point, Old Padra Road",
     address:
       "1/2, Ground Floor, Soho Complex, Punit Nagar, Near Malhar Point, Old Padra Road, Diwalipura, Vadodara, Gujarat 390007",
@@ -114,6 +119,7 @@ export const BRANCHES: Branch[] = [
   {
     slug: "waghodia-road",
     name: "Waghodia Road",
+    city: "Vadodara",
     tag: "Near Parivar Char Rasta",
     address:
       "1st Floor, Anugrah Complex, 3, Opposite Swami Vivekanand School, Near Parivar Char Rasta, Waghodia Road, Vadodara, Gujarat 390025",
@@ -146,6 +152,97 @@ export const BRANCHES: Branch[] = [
 export function mapEmbedSrc(query: string) {
   return `https://www.google.com/maps?q=${encodeURIComponent(query)}&output=embed`;
 }
+
+// Outlets outside Vadodara, run under the Kaka Ni Bhaji Pav name across Gujarat.
+// These are independently signed outlets — name, area and directions only, sourced
+// from the official branch directory. Contact and hour details are not published
+// for these locations, so those fields are simply omitted from their cards.
+export type OtherOutlet = {
+  slug: string;
+  name: string;
+  area: string;
+  city: "Ahmedabad" | "Surat";
+  mapsUrl: string;
+};
+
+export const OTHER_BRANCHES: OtherOutlet[] = [
+  {
+    slug: "ahmedabad-ognaj",
+    name: "Kaka Ni Bhajipav & Fastfood",
+    area: "Ognaj",
+    city: "Ahmedabad",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Kaka+Ni+Bhajipav+%26+Fastfood+Ognaj+Ahmedabad",
+  },
+  {
+    slug: "ahmedabad-nikol",
+    name: "Kaka Ni Bhaji Pav & Fast Food",
+    area: "Nikol",
+    city: "Ahmedabad",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=KaKa+Ni+Bhaji+Pav+Nikol+Ahmedabad",
+  },
+  {
+    slug: "ahmedabad-nana-chiloda",
+    name: "Kaka Ni Bhajipav & Fastfood",
+    area: "Nana Chiloda",
+    city: "Ahmedabad",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Kaka+ni+Bhajipav+Nana+Chiloda+Ahmedabad",
+  },
+  {
+    slug: "ahmedabad-rajendra-park",
+    name: "Kaka Ni Bhaji Pav Fast Food & Punjabi Restaurant",
+    area: "Rajendra Park",
+    city: "Ahmedabad",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Kakani+Bhaji+Pav+Rajendra+Park+Ahmedabad",
+  },
+  {
+    slug: "ahmedabad-odhav",
+    name: "Kaka Ni Bhajipav Fast Food & Punjabi Restaurant",
+    area: "Odhav",
+    city: "Ahmedabad",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Kaka+Ni+Bhajipav+Odhav+Ahmedabad",
+  },
+  {
+    slug: "ahmedabad-maninagar",
+    name: "New Kaka Ni Bhajipav & Fastfood Center",
+    area: "Maninagar",
+    city: "Ahmedabad",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=New+Kaka+ni+Bhajipav+Maninagar+Ahmedabad",
+  },
+  {
+    slug: "ahmedabad-naroda",
+    name: "Kaka Ni Pavbhaji Multicuisine & Garden Restaurant",
+    area: "Naroda",
+    city: "Ahmedabad",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Kaka+ni+Pavbhaji+Multicuisine+Naroda+Ahmedabad",
+  },
+  {
+    slug: "ahmedabad-bhaijipura",
+    name: "Kaka Ni Bhaji Pav",
+    area: "Bhaijipura",
+    city: "Ahmedabad",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Kaka+ni+Bhaji+Pav+Bhaijipura+Ahmedabad",
+  },
+  {
+    slug: "surat-dindoli",
+    name: "Kaka Ni Bhajipav & Fast Food",
+    area: "Dindoli",
+    city: "Surat",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Kaka+Ni+Bhajipav+Dindoli+Surat",
+  },
+  {
+    slug: "surat-nana-varachha",
+    name: "Kaka Ni Bhajipav & Fast Food",
+    area: "Nana Varachha",
+    city: "Surat",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Kaka+Ni+Bhajipav+Nana+Varachha+Surat",
+  },
+];
 
 export type MenuSection = {
   id: string;

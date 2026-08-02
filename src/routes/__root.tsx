@@ -80,11 +80,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Kaka Ni Bhaji Pav — Pav Bhaji in Vadodara" },
+      { title: "Kaka Ni Bhaji Pav — Pav Bhaji in Vadodara, Since 1988" },
       {
         name: "description",
         content:
-          "Kaka Ni Bhaji Pav brings Ahmedabad's original bhaji pav to Vadodara. Pure vegetarian multi-cuisine dining across three branches.",
+          "Kaka Ni Bhaji Pav has served authentic taste since 1988. Ahmedabad's original bhaji pav, now with pure vegetarian multi-cuisine dining across 13 outlets in Vadodara, Ahmedabad and Surat.",
       },
       { property: "og:site_name", content: "Kaka Ni Bhaji Pav" },
       { property: "og:type", content: "website" },

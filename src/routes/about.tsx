@@ -31,13 +31,13 @@ function About() {
       <section className="ink-panel py-20 sm:py-28">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <Reveal>
-            <p className="eyebrow rule-ornament text-saffron">Our Story</p>
+            <p className="eyebrow rule-ornament text-saffron">Our Story · Since 1988</p>
             <h1 className="mt-5 font-display text-4xl leading-tight font-semibold text-balance text-cream sm:text-5xl md:text-6xl">
               From Ahmedabad's streets to Vadodara's family tables
             </h1>
             <p className="mt-6 text-base leading-relaxed text-cream/70">
-              Enjoy the tastiest Bhaji Pav of Ahmedabad, now in Vadodara — the line that started it,
-              and the promise we still keep three branches later.
+              Enjoy the tastiest Bhaji Pav of Ahmedabad, now in Vadodara — the line that started it
+              in 1988, and the promise we still keep across every branch since.
             </p>
           </Reveal>
         </div>
@@ -47,19 +47,20 @@ function About() {
         <div className="mx-auto grid max-w-7xl gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-20">
           <Reveal>
             <h2 className="font-display text-3xl leading-tight font-semibold sm:text-4xl">
-              The Ahmedabad beginning
+              The Ahmedabad beginning, 1988
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
               <p>
-                Kaka Ni Bhaji Pav began the way the best food usually does — with one pan, one
-                recipe and no shortcuts. In Ahmedabad, the name became shorthand for bhaji cooked
-                patiently until it turned deep and glossy, and pav pressed into butter until the
-                edges caught.
+                Kaka Ni Bhaji Pav began in 1988 the way the best food usually does — with one pan,
+                one recipe and no shortcuts. In Ahmedabad, the name became shorthand for bhaji
+                cooked patiently until it turned deep and glossy, and pav pressed into butter until
+                the edges caught.
               </p>
               <p>
                 Nothing about that method was clever. It was just done properly, every single
-                evening, for years of trusted tradition. That consistency is what people remembered,
-                and what they asked for when they moved cities.
+                evening, for nearly four decades of trusted tradition. That consistency is what
+                people remembered, and what they asked for when they moved cities — and why the name
+                now travels with them across Gujarat.
               </p>
               <h3 className="pt-4 font-display text-2xl font-semibold text-foreground">
                 Vadodara, without compromise
@@ -148,8 +149,8 @@ function About() {
                   p: "Punjabi, Chinese, South Indian, tandoori and thali, so a mixed group never has to compromise.",
                 },
                 {
-                  h: "Three branches, one standard",
-                  p: "Karelibaug, Diwalipura and Waghodia Road are run to the same kitchen discipline.",
+                  h: "Three Vadodara branches, one standard",
+                  p: "Karelibaug, Diwalipura and Waghodia Road are run to the same kitchen discipline — part of a name that now serves 13 outlets across Gujarat.",
                 },
               ].map((item) => (
                 <li key={item.h} className="flex gap-4">

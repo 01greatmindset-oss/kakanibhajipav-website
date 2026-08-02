@@ -19,9 +19,13 @@ export function Footer() {
             <h2 className="mt-5 font-display text-2xl font-semibold text-cream">
               Kaka Ni Bhaji Pav
             </h2>
+            <p className="mt-2 text-xs tracking-[0.2em] text-gold uppercase">
+              Serving Authentic Taste Since 1988
+            </p>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-cream/65">
               Enjoy the tastiest Bhaji Pav of Ahmedabad, now in Vadodara. Pure vegetarian,
-              multi-cuisine, and made the way families have loved it for years.
+              multi-cuisine, and made the way families have loved it for years — now 13 outlets
+              strong across Gujarat.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a
@@ -104,7 +108,7 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col gap-3 border-t border-cream/12 pt-6 text-xs text-cream/50 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Kaka Ni Bhaji Pav, Vadodara. All rights reserved.</p>
-          <p>100% Pure Vegetarian · Ahmedabad heritage, served in Vadodara</p>
+          <p>100% Pure Vegetarian · Serving Authentic Taste Since 1988</p>
         </div>
       </div>
     </footer>

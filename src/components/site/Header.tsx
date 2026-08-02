@@ -32,8 +32,8 @@ export function Header() {
             <span className="block font-display text-lg font-semibold tracking-tight">
               Kaka Ni Bhaji Pav
             </span>
-            <span className="block text-[0.62rem] tracking-[0.22em] text-muted-foreground uppercase">
-              Vadodara · Pure Veg
+            <span className="block text-[0.62rem] tracking-[0.22em] text-gold uppercase">
+              Since 1988 · Pure Veg
             </span>
           </span>
         </Link>

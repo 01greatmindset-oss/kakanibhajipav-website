@@ -79,7 +79,8 @@
 
   --gradient-ember: linear-gradient(135deg, var(--chili), var(--saffron));
   --shadow-card: 0 1px 2px oklch(0.19 0.012 70 / 6%), 0 18px 40px -24px oklch(0.19 0.012 70 / 28%);
-  --shadow-lift: 0 6px 12px -6px oklch(0.19 0.012 70 / 12%), 0 28px 60px -28px oklch(0.19 0.012 70 / 40%);
+  --shadow-lift:
+    0 6px 12px -6px oklch(0.19 0.012 70 / 12%), 0 28px 60px -28px oklch(0.19 0.012 70 / 40%);
 }
 
 .dark {
@@ -132,10 +133,7 @@
     inset: 0;
     pointer-events: none;
     opacity: 0.35;
-    background-image: radial-gradient(
-      oklch(0.19 0.012 70 / 6%) 0.5px,
-      transparent 0.5px
-    );
+    background-image: radial-gradient(oklch(0.19 0.012 70 / 6%) 0.5px, transparent 0.5px);
     background-size: 4px 4px;
   }
 }
@@ -152,6 +150,23 @@
 @utility ink-panel {
   background-color: var(--ink);
   color: oklch(0.96 0.014 92);
+}
+
+@utility heritage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  border: 1px solid oklch(0.762 0.098 87 / 55%);
+  background: oklch(0.19 0.012 70 / 55%);
+  padding: 0.45rem 1.1rem;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--saffron);
+  backdrop-filter: blur(2px);
 }
 
 @utility rule-ornament {
